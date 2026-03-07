@@ -24,24 +24,8 @@ Detailed steps:
    - The program will serialize a `Purchase` and write a file named like `purchase{IdPurchase}.json` to its working directory.
    - The terminal will print the full file path (for example: `C:\path\to\purchase{IdPurchase}.json`). Copy that full path.
 3. Change to the `Purchase_Deserialize` project:
-   - Open `Purchase_Deserialize\Program.cs` and replace the `"Complete FilePath"` placeholder with the full path you copied. Using a verbatim string is recommended to avoid escaping backslashes:
-     ```csharp
-     var purchaseJson = File.ReadAllText(@"C:\full\path\purchase{IdPurchase}.json");
-     ```
-   - Alternatively, modify the deserializer to accept the path as a command-line argument and pass the copied path when running.
+   - Open `Purchase_Deserialize\Program.cs` and replace the `"Complete FilePath"` placeholder with the full path you copied. 
+
 4. Set `Purchase_Deserialize` as the startup project, build and run it.
    - The program will read the JSON file, deserialize it into a `Purchase`, and print the result.
 
-## Notes and tips
-
-- The deserializer uses `System.Text.Json`. For correct deserialization the `Purchase` class must expose properties that can be set by the serializer (either public setters or a constructor that matches the JSON properties).
-- If you prefer not to edit source, copy the generated file into the path already hard-coded in `Purchase_Deserialize\Program.cs`.
-- If you get an empty or null `Products` list after deserialization, make sure the JSON file was produced by the serializer project and that `Purchase` exposes settable properties or a compatible constructor.
-
-## Files of interest
-
-- `Purchase_Serialize_Deserialize_Sample\Program.cs` — serializer example
-- `Purchase_Deserialize\Program.cs` — deserializer example (edit the file path here)
-- `BE\Purchase.cs`, `BE\Product.cs` — model classes
-
-If you want, I can add a small change to accept the file path as a command-line argument in the deserializer project.
