@@ -19,7 +19,7 @@ namespace Purchase_Deserialize
             try
             {
                 //Very important to use the same path where the file was created, otherwise it will throw an exception because it won't find the file...
-                //Tip: First Purchse_Serialize project and copy the file path from the terminal, then paste it here in the code and use it to read the file.
+                //Tip: First Run (CTRL+F5) Purchse_Serialize project and copy the file path from the terminal, then paste it here in the code and use it to read the file.
 
                 var purchaseJson = File.ReadAllText("Complete FilePath");
 
