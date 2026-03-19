@@ -16,17 +16,11 @@ namespace BE
 
         public string FullAddress { get; set; }
 
-
-        public Customer(int idNumber, string firstName, string lastName, MaritalStatus maritalStatus, DateTime birthDate,  string fullAdress)
+        public Customer()
         {
-            IDNumber = idNumber;
-            FirstName = firstName;
-            LastName = lastName;
-            MaritalStatus = maritalStatus;
-            BirthDate = birthDate;
-            FullAddress = fullAdress;
-
+                
         }
+       
 
         public int GetAge() 
         {
@@ -37,7 +31,10 @@ namespace BE
         }
 
 
-
+        public string GetFullName() 
+        { 
+          return $"{FirstName} {LastName}";
+        }
 
 
     }
