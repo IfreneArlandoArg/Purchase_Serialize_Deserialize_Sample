@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,6 +13,16 @@ namespace Purchase_Serialize_Deserialize_Sample
     {
         static void Main(string[] args)
         {
+
+            var customer = new Customer
+            {
+                IDNumber = 12345678,
+                FirstName = "John",
+                LastName = "Doe",
+                MaritalStatus = MaritalStatus.Single,
+                BirthDate = new DateTime(1999, 5, 15, 0, 0, 0, DateTimeKind.Utc),
+                FullAddress = "123 Main St, Anytown, USA"
+            };
 
             var products = new List<Product>
             {
@@ -31,28 +40,36 @@ namespace Purchase_Serialize_Deserialize_Sample
                 new Product { Name = "Ethernet Cable (10ft)", Price = 9.99m }
             };
 
-            var purchase = new Purchase(products);
-            
-            var options = new  JsonSerializerOptions
+            var purchase = new Purchase(customer,products);
+
+            var options = new JsonSerializerOptions
             {
                 WriteIndented = true
             };
 
-            var json = JsonSerializer.Serialize(purchase,options);
+            var json = JsonSerializer.Serialize(purchase, options);
+
+           
+            var DesktopDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            var MainDirectory = Path.Combine(DesktopDirectory, "Purchases");
+
+
+            if (!Directory.Exists(MainDirectory))
+            {
+                Directory.CreateDirectory(MainDirectory);
+            }
 
             
 
-            var fileName = $"purchase{purchase.IdPurchase}.json";
-
-            var fullPath = Path.GetFullPath(fileName);
+            var fullPath = Path.Combine(MainDirectory, $"purchase{purchase.IdPurchase}.json");
+            
 
             File.WriteAllText(fullPath, json);
 
-            Console.WriteLine($"Serialized JSON: \n{json}");
 
             Console.WriteLine($"Serialized JSON: \n{json}");
             Console.WriteLine($"\nFile path:\n{fullPath}");
-           
+
 
         }
     }

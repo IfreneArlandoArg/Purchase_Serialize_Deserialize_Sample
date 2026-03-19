@@ -10,9 +10,23 @@
   <Class Name="BE.Purchase">
     <Position X="7" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAgAAQAQAAAAAAABAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAQAQAAAAAAABAAAQ=</HashCode>
       <FileName>Purchase.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="BE.Customer">
+    <Position X="4.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAABABAQQAAAAAAAAQAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="BE.MaritalStatus">
+    <Position X="9.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAEACAA=</HashCode>
+      <FileName>MaritalStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

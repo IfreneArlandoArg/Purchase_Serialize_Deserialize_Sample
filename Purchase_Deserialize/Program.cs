@@ -20,8 +20,9 @@ namespace Purchase_Deserialize
             {
                 //Very important to use the same path where the file was created, otherwise it will throw an exception because it won't find the file...
                 //Tip: First Run (CTRL+F5) Purchse_Serialize project and copy the file path from the terminal, then paste it here in the code and use it to read the file.
-
-                var purchaseJson = File.ReadAllText("Complete FilePath");
+                //                                       Modify Me....
+                //                                    ⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️
+                var purchaseJson = File.ReadAllText("C:\\Users\\aifrene\\OneDrive - UNIVERSIDAD ABIERTA INTERAMERICANA\\Desktop\\Purchases\\purchase49099162-61fc-4614-b201-2f4ae3a3ef2d.json");
 
                 var options = new JsonSerializerOptions
                 {
