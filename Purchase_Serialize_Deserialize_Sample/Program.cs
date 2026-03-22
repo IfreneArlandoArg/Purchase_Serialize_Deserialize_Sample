@@ -17,16 +17,9 @@ namespace Purchase_Serialize_Deserialize_Sample
             try
             {
                 var bllProduct = new BLLProduct();
+                var bllCustomer = new BLLCustomer();
 
-                var customer = new Customer
-                {
-                    IDNumber = 12345678,
-                    FirstName = "John",
-                    LastName = "Doe",
-                    MaritalStatus = MaritalStatus.Single,
-                    BirthDate = new DateTime(1999, 5, 15, 0, 0, 0, DateTimeKind.Utc),
-                    FullAddress = "123 Main St, Anytown, USA"
-                };
+                var customer = bllCustomer.GetById(12345678);
 
                 var products = bllProduct.GetAll();
 
