@@ -15,7 +15,7 @@ The projects target .NET Framework 4.7.2 and are written in C# 7.3.
 Quick summary:
 
 1. First, run the serializer to generate the JSON file and copy the filepath printed in the terminal.
-2. Then switch to the deserializer project, paste that full filepath into `Purchase_Deserialize\Program.cs`, build and run the deserializer.
+2. Then switch to the deserializer project, paste that full *FilePath* into `Purchase_Deserialize\appsettings.json` , build and run the deserializer.
 
 Detailed steps:
 
@@ -24,8 +24,7 @@ Detailed steps:
    - The program will serialize a `Purchase` and write a file named like `purchase{IdPurchase}.json` to its working directory.
    - The terminal will print the full file path (for example: `C:\path\to\purchase{IdPurchase}.json`). Copy that full path.
 3. Change to the `Purchase_Deserialize` project:
-   - Open `Purchase_Deserialize\Program.cs` and replace the `"Complete FilePath"` placeholder with the full path you copied. 
-
+   - Open `Purchase_Deserialize\appsettings.json` and replace the *Value* of the field *FilePath* with the filepath, you copied previously(). 
 4. Set `Purchase_Deserialize` as the startup project, build and run it.
    - The program will read the JSON file, deserialize it into a `Purchase`, and print the result.
 
