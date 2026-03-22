@@ -8,7 +8,7 @@ using DAL;
 
 namespace BLL
 {
-    public class BLLProduct : IRepository<Product>
+    public class BLLProduct : IRepository<Product,int>
     {
         DALProduct dalProduct = new DALProduct();
 
@@ -25,6 +25,11 @@ namespace BLL
         public List<Product> GetAll()
         {
            return dalProduct.GetAll();
+        }
+
+        public Product GetById(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Product item)

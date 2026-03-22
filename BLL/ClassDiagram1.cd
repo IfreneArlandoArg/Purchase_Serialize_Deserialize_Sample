@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="BLL.BLLProduct" Collapsed="true">
+  <Class Name="BLL.BLLProduct">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAYAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAgABAAAAAAA=</HashCode>
+      <HashCode>AAYAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAgABAAAAAIA=</HashCode>
       <FileName>BLLProduct.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
