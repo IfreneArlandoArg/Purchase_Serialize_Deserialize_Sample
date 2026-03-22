@@ -115,6 +115,10 @@
       <Project>{8233f37a-b809-4df4-8d07-cf572a7e2e80}</Project>
       <Name>BE</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{fca2f82c-32af-43fa-b3c7-eb0c62a3cfa8}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
