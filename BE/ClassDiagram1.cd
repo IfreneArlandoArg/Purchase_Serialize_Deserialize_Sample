@@ -10,17 +10,24 @@
   <Class Name="BE.Purchase">
     <Position X="7" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAQAQAAAAAAABAAAQ=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAAEAAAAAAAAAAAAQAQAAAAAAABAAAQ=</HashCode>
       <FileName>Purchase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BE.Customer">
     <Position X="4.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAABABAQQAAAAAAAAQAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <HashCode>AAAAAEAABABAQQAAAAAAAAQAAAAAAAAIAAAAAAAAAAg=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Interface Name="BE.IRepository&lt;T&gt;">
+    <Position X="0.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="BE.MaritalStatus">
     <Position X="9.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
