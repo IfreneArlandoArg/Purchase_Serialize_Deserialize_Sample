@@ -42,7 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
+    <Compile Include="ICreateRepository.cs" />
+    <Compile Include="IDeleteRepository.cs" />
+    <Compile Include="IHistoricalRepository.cs" />
+    <Compile Include="IReadRepository.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="IUpdateRepository.cs" />
     <Compile Include="MaritalStatus.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

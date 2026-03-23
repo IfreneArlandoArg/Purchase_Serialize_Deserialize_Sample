@@ -9,10 +9,18 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BLL.BLLCustomer">
-    <Position X="6.75" Y="2.75" Width="1.5" />
+    <Position X="4.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAYAAAAAAAAAAAAAAIAAAAAAAAEAAAAAAgAAAAAAAIA=</HashCode>
       <FileName>BLLCustomer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BLL.BLLPurchase">
+    <Position X="9.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAABAAAAAAAAAAAAAAAEAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>BLLPurchase.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
