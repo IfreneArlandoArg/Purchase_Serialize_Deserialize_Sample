@@ -20,9 +20,12 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        void HandleEmptyDirectory(string MainDirectory) 
+        void HandleEmptyDirectory(string MainDirectory, string FilePath) 
         {
-            Directory.CreateDirectory(MainDirectory);
+            if (!Directory.Exists(MainDirectory))
+            {
+                Directory.CreateDirectory(MainDirectory);
+            }
 
             var OptionsWrite = new JsonSerializerOptions
             {
@@ -31,32 +34,30 @@ namespace DAL
 
             var json = JsonSerializer.Serialize(new List<Purchase>(), OptionsWrite);
 
-            File.WriteAllText(MainDirectory, json);
+            File.WriteAllText(FilePath, json);
         }
 
         public List<Purchase> GetAll()
         {
             var DesktopDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            var MainDirectory = Path.Combine(DesktopDirectory, "Purchases", "Purchases.json");
+            var MainDirectory = Path.Combine(DesktopDirectory, "Purchases");
+            var FilePath = Path.Combine(MainDirectory, "Purchases.json");
 
 
-            if (Directory.Exists(MainDirectory))
+
+            if (!File.Exists(FilePath))
             {
-                HandleEmptyDirectory(MainDirectory);
+                HandleEmptyDirectory(MainDirectory, FilePath);
             }
 
 
-
-
-
-            var purchasesJson = File.ReadAllText($@"{MainDirectory}");
+            var purchasesJson = File.ReadAllText($@"{FilePath}");
 
             var options = new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true,
                 IncludeFields = true
             };
-
 
 
             return JsonSerializer.Deserialize<List<Purchase>>(purchasesJson, options);

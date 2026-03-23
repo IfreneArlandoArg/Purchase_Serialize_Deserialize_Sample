@@ -24,7 +24,7 @@ namespace Purchases_Serialize
 
                 var customer = bllCustomer.GetById(87654321);
 
-                var products = bllProduct.GetAll().Where(P => P.Price < 20).ToList();
+                var products = bllProduct.GetAll().Where(P => P.Price > 20).ToList();
 
                 var purchase = new Purchase(customer, products);
 
