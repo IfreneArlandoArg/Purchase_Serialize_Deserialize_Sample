@@ -9,10 +9,13 @@ This solution demonstrates serialization and deserialization of `Purchase` objec
 - `Purchases_Serialize` project: Similar to the first serializer but handles multiple purchases, loading existing ones from file, adding a new one, and serializing the list to `Purchases.json`.
 - `BE` project: Contains model classes (`Purchase`, `Product`, `Customer`, `MaritalStatus`) and repository interfaces.
     <p align="center">
-  <img src="images/Classes-Enums.png" alt="Class and Enum Diagram" width="70%">
+       <img src="images/Classes-Enums.png" alt="Class and Enum Diagram" width="70%">
     </p>
+   
+    <p align="center">
+         <img src="images/Interfaces.png" alt="Interfaces" width="70%">
+   </p>
 
-    ![Interfaces...](images/Interfaces.png)
 
 - `BLL` project: Business logic layer with classes like `BLLCustomer`, `BLLProduct`, and `BLLPurchase` for data operations.
 - `DAL` project: Data access layer with hardcoded sample data (`DALCustomer`, `DALProduct`) and file-based storage for purchases (`DALPurchase`).
