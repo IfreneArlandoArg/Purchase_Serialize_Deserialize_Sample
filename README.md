@@ -8,7 +8,10 @@ This solution demonstrates serialization and deserialization of `Purchase` objec
 - `Purchase_Deserialize` project: Reads a JSON file (configured via `appsettings.json`), deserializes it back into a `Purchase` object, and prints a human-readable representation.
 - `Purchases_Serialize` project: Similar to the first serializer but handles multiple purchases, loading existing ones from file, adding a new one, and serializing the list to `Purchases.json`.
 - `BE` project: Contains model classes (`Purchase`, `Product`, `Customer`, `MaritalStatus`) and repository interfaces.
-    ![Class(es) and Enum(s)...](images/Classes-Enums.png)
+    <p align="center">
+  <img src="images/Classes-Enums.png" alt="Class and Enum Diagram" width="70%">
+    </p>
+
     ![Interfaces...](images/Interfaces.png)
 
 - `BLL` project: Business logic layer with classes like `BLLCustomer`, `BLLProduct`, and `BLLPurchase` for data operations.
