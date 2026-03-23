@@ -47,7 +47,7 @@ namespace Purchases_Serialize
                 var MainDirectory = Path.Combine(DesktopDirectory, "Purchases");
 
 
-                if (Directory.Exists(MainDirectory))
+                if (!Directory.Exists(MainDirectory))
                 {
                     Directory.CreateDirectory(MainDirectory);
                 }
