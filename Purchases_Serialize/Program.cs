@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
+using System.Text.Json;
 using BE;
 using BLL;
 
-namespace Purchase_Serialize_Deserialize_Sample
+namespace Purchases_Serialize
 {
-    public class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
@@ -18,33 +18,43 @@ namespace Purchase_Serialize_Deserialize_Sample
             {
                 var bllProduct = new BLLProduct();
                 var bllCustomer = new BLLCustomer();
+                var bllPurchase = new BLLPurchase();
 
-                var customer = bllCustomer.GetById(12345678);
 
-                var products = bllProduct.GetAll();
+
+                var customer = bllCustomer.GetById(87654321);
+
+                var products = bllProduct.GetAll().Where(P => P.Price > 20).ToList();
 
                 var purchase = new Purchase(customer, products);
+
+
+                var purchases = bllPurchase.GetAll();
+
+                purchases.Add(purchase);
 
                 var options = new JsonSerializerOptions
                 {
                     WriteIndented = true
                 };
 
-                var json = JsonSerializer.Serialize(purchase, options);
+                var json = JsonSerializer.Serialize(purchases, options);
 
+
+                
 
                 var DesktopDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 var MainDirectory = Path.Combine(DesktopDirectory, "Purchases");
 
 
-                if (!Directory.Exists(MainDirectory))
+                if (Directory.Exists(MainDirectory))
                 {
                     Directory.CreateDirectory(MainDirectory);
                 }
 
 
 
-                var fullPath = Path.Combine(MainDirectory, $"purchase{purchase.IdPurchase}.json");
+                var fullPath = Path.Combine(MainDirectory, "Purchases.json");
 
 
                 File.WriteAllText(fullPath, json);
@@ -52,16 +62,13 @@ namespace Purchase_Serialize_Deserialize_Sample
 
                 Console.WriteLine($"Serialized JSON: \n{json}");
                 Console.WriteLine($"\nFile path:\n{fullPath}");
-            
+
             }
             catch (Exception Ex)
             {
 
                 Console.WriteLine(Ex.Message);
             }
-            
-
-
         }
     }
 }

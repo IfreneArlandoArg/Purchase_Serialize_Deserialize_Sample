@@ -10,8 +10,12 @@ namespace BLL
 {
     public class BLLProduct : IRepository<Product,int>
     {
-        DALProduct dalProduct = new DALProduct();
+        readonly IRepository<Product> dalProduct;
 
+        public BLLProduct()
+        {
+            dalProduct = new DALProduct();
+        }
         public void Add(Product item)
         {
             throw new NotImplementedException();
