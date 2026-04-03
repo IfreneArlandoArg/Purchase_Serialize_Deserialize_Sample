@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CAE085F1-6341-4155-A3C5-F0E3684961DA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Purchase_Serialize_Deserialize_Sample</RootNamespace>
-    <AssemblyName>Purchase_Serialize_Deserialize_Sample</AssemblyName>
+    <RootNamespace>Purchase_Serialize</RootNamespace>
+    <AssemblyName>Purchase_Serialize</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
