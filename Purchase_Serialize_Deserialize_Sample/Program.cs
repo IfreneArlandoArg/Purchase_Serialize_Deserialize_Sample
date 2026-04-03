@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using BE;
 using BLL;
 
-namespace Purchase_Serialize_Deserialize_Sample
+namespace Purchase_Serialize
 {
     public class Program
     {
